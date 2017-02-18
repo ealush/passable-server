@@ -1,0 +1,21 @@
+{
+  "name": "passable-server",
+  "version": "1.0.0",
+  "description": "Server Side usage of Passable.js",
+  "main": "server.js",
+  "author": "Evyatar Alush",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha --colors -w ./**/*.spec.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "express": "^4.14.1",
+    "passable": "^1.0.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.15.0",
+    "mocha": "^3.2.0"
+  }
+}
