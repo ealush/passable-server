@@ -25,11 +25,11 @@ describe('Testing "example-test" behaviour', () => {
         expect(testResult.testsPerformed).to.have.deep.property('MrBeauregard.failCount', 0);
     });
 
-    it('Should pass ExampleTestTwo', () => {
+    it('Should pass Snuffles', () => {
         expect(testResult.testsPerformed).to.have.deep.property('Snuffles.failCount', 0);
     });
 
-    it('Should fail ExampleTestThree', () => {
+    it('Should fail Pilot', () => {
         expect(testResult.testsPerformed).to.have.deep.property('Pilot.failCount', 1);
     });
 });

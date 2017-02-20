@@ -1,6 +1,6 @@
 const Passable = require('passable');
 
-const needfulThings = (testData) => new Passable('NeedfulThings', function (group, pass) {
+const needfulThings = (testData) => new Passable('NeedfulThings', function (pass, group) {
     pass('MrBeauregard', 'Should say "Marmalade is served"', () => (
         group.enforce(testData.MrBeauregard.says, {
             equals: {
@@ -27,7 +27,7 @@ const needfulThings = (testData) => new Passable('NeedfulThings', function (grou
 
 const cursePurgePlus = (testData) => {
 
-    const exampleTest = new Passable('CursePurgePlus', function (group, pass) {
+    const exampleTest = new Passable('CursePurgePlus', function (pass, group) {
         pass('GetSchwifty', 'Should say "Show me what you got"', () => (
             group.enforce(testData.GetSchwifty.say, {
                 equals: {
