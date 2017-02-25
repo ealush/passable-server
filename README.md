@@ -3,9 +3,13 @@
 Passable is an isomorphic data model validations library.
 Here is an as-simple-as-it-gets example server implementation.
 
-## How to use Passable?
-To test the example routes, you should send a `POST` request to either of the example routes already configured.
-* `/example/needful_things`
+## Testing it online
+You can test Passable online by sending `POST` requests to either of these two routes:
+* https://fathomless-cliffs-24511.herokuapp.com/example/needful_things
+* https://fathomless-cliffs-24511.herokuapp.com//example/curse_purge_plus
+
+### Getting them to pass
+* `POST` `/example/needful_things`
     * An example for a passing request body:
     ```json
     {
@@ -22,7 +26,7 @@ To test the example routes, you should send a `POST` request to either of the ex
         }
     }
     ```
-* `/example/curse_purge_plus`
+* `POST` `/example/curse_purge_plus`
     * An example for a passing request body:
     ```json
     {

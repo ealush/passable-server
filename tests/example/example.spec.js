@@ -17,6 +17,8 @@ const test = require('./example.test').needfulThings,
 describe('Testing "example-test" behaviour', () => {
     const testResult = test(testData);
 
+    console.log(testResult)
+
     it('Should only perform three tests', () => {
         expect(testResult.testCount).to.equal(3);
     });

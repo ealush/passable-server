@@ -1,6 +1,7 @@
 const fs = require('fs');
 
-const configPath = `./config/${process.env.NODE_ENV}.json`,
-    config = JSON.parse(fs.readFileSync(configPath));
+const config = {
+    port: process.env.PORT || 1166
+};
 
 module.exports = config;

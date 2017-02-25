@@ -1,54 +1,30 @@
 const Passable = require('passable');
 
-const needfulThings = (testData) => new Passable('NeedfulThings', function (pass, group) {
+const needfulThings = (testData) => Passable('NeedfulThings', (pass, enforce) => {
     pass('MrBeauregard', 'Should say "Marmalade is served"', () => (
-        group.enforce(testData.MrBeauregard.says, {
-            equals: {
-                testAgainst: 'Marmalade is served'
-            }
-        })
+        testData.MrBeauregard.says === 'Marmalade is served'
     ));
+
     pass('Snuffles', 'Should ask "Where are my testicles, Summer?"', () => (
-        group.enforce(testData.Snuffles.asks, {
-            equals: {
-                testAgainst: 'Where are my testicles, Summer?'
-            }
-        })
+        testData.Snuffles.asks === 'Where are my testicles, Summer?'
     ));
+
     pass('Pilot', 'Should not trigger "Neutrino Bomb"', () => (
-        group.enforce(testData.Pilot.trigger, {
-            equals: {
-                testAgainst: 'Neutrino Bomb',
-                expect: false
-            }
-        })
+        testData.Pilot.trigger !== 'Neutrino Bomb'
     ));
 });
 
 const cursePurgePlus = (testData) => {
 
-    const exampleTest = new Passable('CursePurgePlus', function (pass, group) {
+    const exampleTest = Passable('CursePurgePlus', (pass, enforce) => {
         pass('GetSchwifty', 'Should say "Show me what you got"', () => (
-            group.enforce(testData.GetSchwifty.say, {
-                equals: {
-                    testAgainst: 'Show me what you got'
-                }
-            })
+            testData.GetSchwifty.say === 'Show me what you got'
         ));
         pass('RickSanchez', 'Should be in great pain.', () => (
-            group.enforce(testData.RickSanchez.shout, {
-                equals: {
-                    testAgainst: 'Wubba lubba dub-dub!'
-                }
-            })
+            testData.RickSanchez.shout === 'Wubba lubba dub-dub!'
         ));
         pass('BlipsAndChitz', 'Should play "Roy2"', () => (
-            group.enforce(testData.BlipsAndChitz.game, {
-                equals: {
-                    testAgainst: 'Roy2',
-                    expect: false
-                }
-            })
+            testData.BlipsAndChitz.game === 'Roy2'
         ));
     });
 
