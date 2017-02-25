@@ -8,6 +8,8 @@ You can test Passable online by sending `POST` requests to either of these two r
 * https://fathomless-cliffs-24511.herokuapp.com/example/needful_things
 * https://fathomless-cliffs-24511.herokuapp.com/example/curse_purge_plus
 
+Server index: https://fathomless-cliffs-24511.herokuapp.com/
+
 ### Getting them to pass
 * `POST` `/example/needful_things`
     * An example for a passing request body:
