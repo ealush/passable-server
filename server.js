@@ -7,6 +7,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: true
 }));
+app.use(express.static('static'));
 
 app.listen(config.port, () => {
     console.log('Server listening at port %d', config.port);

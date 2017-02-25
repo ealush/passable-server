@@ -1,12 +1,12 @@
 # passable-server
 
 Passable is an isomorphic data model validations library.
-Here is an as-simple-as-it-gets example server implementation.
+Here is an as-simple-as-it-gets example server implementation running Passable.
 
 ## Testing it online
 You can test Passable online by sending `POST` requests to either of these two routes:
 * https://fathomless-cliffs-24511.herokuapp.com/example/needful_things
-* https://fathomless-cliffs-24511.herokuapp.com//example/curse_purge_plus
+* https://fathomless-cliffs-24511.herokuapp.com/example/curse_purge_plus
 
 ### Getting them to pass
 * `POST` `/example/needful_things`
