@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 const config = {
-    port: process.env.PORT || 1166
+    port: process.env.PORT || 5665
 };
 
 module.exports = config;

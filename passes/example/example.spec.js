@@ -1,7 +1,7 @@
 const chai = require('chai'),
     expect = chai.expect;
 
-const test = require('./example.test').needfulThings,
+const test = require('./example.pass'),
     testData = {
         MrBeauregard: {
             says: 'Marmalade is served'
@@ -17,21 +17,19 @@ const test = require('./example.test').needfulThings,
 describe('Testing "example-test" behaviour', () => {
     const testResult = test(testData);
 
-    console.log(testResult)
-
     it('Should only perform three tests', () => {
         expect(testResult.testCount).to.equal(3);
     });
 
     it('Should pass MrBeauregard', () => {
-        expect(testResult.testsPerformed).to.have.deep.property('MrBeauregard.failCount', 0);
+        expect(testResult).to.nested.include({'testsPerformed.MrBeauregard.failCount': 0});
     });
 
     it('Should pass Snuffles', () => {
-        expect(testResult.testsPerformed).to.have.deep.property('Snuffles.failCount', 0);
+        expect(testResult).to.nested.include({'testsPerformed.Snuffles.failCount': 0});
     });
 
     it('Should fail Pilot', () => {
-        expect(testResult.testsPerformed).to.have.deep.property('Pilot.failCount', 1);
+        expect(testResult).to.nested.include({'testsPerformed.Pilot.failCount': 1});
     });
 });

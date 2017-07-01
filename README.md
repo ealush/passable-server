@@ -3,47 +3,8 @@
 Passable is an isomorphic data model validations library.
 Here is an as-simple-as-it-gets example server implementation running Passable.
 
-## Testing it online
-You can test Passable online by sending `POST` requests to either of these two routes:
-* https://fathomless-cliffs-24511.herokuapp.com/example/needful_things
-* https://fathomless-cliffs-24511.herokuapp.com/example/curse_purge_plus
-
-Server index: https://fathomless-cliffs-24511.herokuapp.com/
-
-### Getting them to pass
-* `POST` `/example/needful_things`
-    * An example for a passing request body:
-    ```json
-    {
-        "testData": {
-            "MrBeauregard": {
-                "says": "Marmalade is served"
-            },
-            "Snuffles": {
-                "asks": "Where are my testicles, Summer?"
-            },
-            "Pilot": {
-                "trigger": "none"
-            }
-        }
-    }
-    ```
-* `POST` `/example/curse_purge_plus`
-    * An example for a passing request body:
-    ```json
-    {
-        "testData": {
-            "GetSchwifty": {
-                "say": "Show me what you got"
-            },
-            "RickSanchez": {
-                "shout": "Wubba lubba dub-dub!"
-            },
-            "BlipsAndChitz": {
-                "game": "Roy1"
-            }
-        }
-    }
-    ```
+Capabilities:
+* Making a POST request to each of the passes with the data in the request body, and getting back the pass result.
+* Building all the tests as JS files that the server can serve. Loading them to the page will attach them to window (`window.passes.your-test`).
 
 Learn more about [Passable](https://github.com/ealush/passable): https://github.com/ealush/passable

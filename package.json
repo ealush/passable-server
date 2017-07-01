@@ -6,16 +6,24 @@
   "author": "Evyatar Alush",
   "license": "MIT",
   "scripts": {
-    "test": "mocha --colors -w ./**/*.spec.js"
+    "test": "mocha --colors -w ./**/*.spec.js",
+    "build": "WEBPACK_ENV=build webpack"
   },
   "dependencies": {
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
-    "passable": "^5.3.0"
+    "passable": "^5.3.0",
+    "uglifyjs-webpack-plugin": "^0.4.6"
   },
   "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.5.2",
     "chai": "^4.0.2",
     "eslint": "^4.1.1",
-    "mocha": "^3.4.2"
+    "mocha": "^3.4.2",
+    "webpack": "^3.0.0",
+    "webpack-glob-entries": "^1.0.1"
   }
 }

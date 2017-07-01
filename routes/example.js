@@ -1,8 +1,6 @@
-const exampleTest = require('../tests').example;
+const exampleTest = require('../passes').example;
 
-module.exports = app => {
+module.exports = (app) => {
 
-    app.post('/example/needful_things', exampleTest.needfulThings);
-
-    app.post('/example/curse_purge_plus', exampleTest.cursePurgePlus);
-}
+    app.post('/example', exampleTest.needfulThings);
+};

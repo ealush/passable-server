@@ -3,14 +3,15 @@ const express = require('express'),
     config = require('./config'),
     app = express();
 
+global.passablePasses = {};
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: true
 }));
-app.use(express.static('static'));
 
 app.listen(config.port, () => {
     console.log('Server listening at port %d', config.port);
 });
 
-require('./routes')(app);
+require('./routes')(app, express);
