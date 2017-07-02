@@ -3,8 +3,6 @@ const express = require('express'),
     config = require('./config'),
     app = express();
 
-global.passablePasses = {};
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: true
