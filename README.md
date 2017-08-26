@@ -1,5 +1,7 @@
 # passable-server
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/ealush/passable-server.svg)](https://greenkeeper.io/)
+
 Passable is an isomorphic data model validations library.
 Here is an as-simple-as-it-gets example server implementation running Passable.
 
